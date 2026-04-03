@@ -57,32 +57,38 @@ header {
     font-family: "Boldonse";
 }
 
-/* 
-   4. Navbar*/
-
+/* NAV */
 nav {
     background: #6d4469;
-    width: 100%;        
-    padding: 1rem;     
+    width: 100%;
+    padding: 1rem 2rem; 
 }
+
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;   
+    gap: 1rem;       
 }
 
 nav ul li {
-    margin: 0 1rem;
+    list-style: none;   
 }
 
 nav ul li a {
     text-decoration: none;
     color: #e2e2e2;
-    transition: color 0.3s;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
-nav ul li a:hover {
-    color: #e6e6e6;
+/* Responsive */
+@media (max-width: 500px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
 }
 
 /* ===== Sobre Mí  ===== */
@@ -175,6 +181,7 @@ nav ul li a:hover {
     padding: 1rem;
     max-width: 300px;
     flex: 1 1 250px;
+    width: 100%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -295,7 +302,7 @@ nav ul li a:hover {
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   overflow: hidden;
-  width: 250px;
+  width: 100%;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -380,5 +387,17 @@ nav ul li a:hover {
 
     #sobre-mi img {
         align-self: center;
+    }
+}
+@media (max-width: 768px) {
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .tarjeta {
+        width: 90%;
+        max-width: 420px;
     }
 }
