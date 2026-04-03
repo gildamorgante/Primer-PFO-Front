@@ -1,0 +1,384 @@
+
+
+/* 
+   2. Reset y body
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Global para todas las etiquetas h1, h2, h3 y p*/
+
+h1 {
+  font-family: 'Boldonse', sans-serif;
+  font-size: 1,5rem;
+  color: #6d4469;
+  margin-bottom: 1rem;
+  
+}
+
+h2 {
+  font-family: 'Boldonse', sans-serif;
+  font-size: 1,5rem;
+  color: #6d4469;
+  margin-bottom: 1rem;
+  
+}
+
+h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2,5rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+
+}
+
+
+
+body {
+    font-family: "Boldonse";
+    line-height: 1.5;
+    font-weight: 200;
+    background: #e9e9e9;
+}
+/* 
+   3. Header */
+header {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-family: "Boldonse";
+}
+
+/* 
+   4. Navbar*/
+
+nav {
+    background: #6d4469;
+    width: 100%;        
+    padding: 1rem;     
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e2e2e2;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e6e6e6;
+}
+
+/* ===== Sobre Mí  ===== */
+#sobre-mi {
+  background-color: #ffffff;
+  padding: 6rem 2rem; /* más espacio arriba y abajo */
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-sobre-mi {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* espacio entre imagen y texto */
+  max-width: 1000px;
+  width: 100%;
+}
+
+#sobre-mi .contenedor-sobre-mi .foto img {
+  width: 320px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  transform: scale(1) rotate(0deg);
+  display: block; /* evita que se descuadre */
+}
+
+/* Hover */
+#sobre-mi .contenedor-sobre-mi .foto img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.contenedor-sobre-mi .texto {
+  flex: 1;
+}
+
+.contenedor-sobre-mi .texto h2 {
+  font-size: 1.5rem;
+  color: #4a4a4a; /* gris oscuro elegante */
+  margin-bottom: 1rem;
+}
+
+.contenedor-sobre-mi .texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666666; /* gris más claro para texto */
+
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  .contenedor-sobre-mi {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contenedor-sobre-mi .foto img {
+    width: 250px;
+    margin-bottom: 2rem;
+  }
+  .contenedor-sobre-mi .texto h2 {
+    font-size: 2rem;
+  }
+}
+
+
+  /*  6. Sección Tarjetas / Proyectos*/
+#tarjetas {
+    padding: 2rem;
+}
+
+#tarjetas h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    max-width: 300px;
+    flex: 1 1 250px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+/* 7. Tabla de Habilidades */
+#habilidades {
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+#habilidades table {
+    width: 50%;
+    border-collapse: collapse;
+    min-width: 400px;
+    margin: 0 auto; /* centra la tabla */
+}
+
+/* Encabezados de columna */
+#habilidades th {
+    background-color: #6d4469;  
+    color: #f5f5f5;             
+    border: 1px solid #6d4469;
+    padding: 0.75rem;
+    text-align: center;
+    font-family: "Boldonse", sans-serif;
+    font-size: 1rem;
+}
+
+/* Celdas normales */
+#habilidades td {
+    font-family: 'Inter', sans-serif; 
+    font-size: 1.2rem;
+    color: #000000;                    
+    border: 1px solid #6d4469;
+    padding: 0.75rem;
+    text-align: left;
+    background-color: #ffffff;
+}
+/* 
+   8. Formulario de Contacto */
+#contacto {
+    padding: 2rem;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contacto input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contacto button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #6d4469;
+    color: #f0f0f0;
+    font-weight: bold;
+    cursor: pointer;
+    font: "Inter";
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contacto button:hover {
+    background-color: #6d4469;
+    transform: scale(1.05);
+}
+
+/* ===== Sección Películas ===== */
+#peliculas {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+#peliculas h2 {
+  text-align: center;
+  font-family: 'Boldonse', sans-serif;
+  font-size: 1,5rem;
+  margin-bottom: 3rem;
+  color: #6d4469;
+}
+
+.contenedor-peliculas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;              /* espacio entre tarjetas */
+  justify-content: center; /* centra horizontalmente */
+}
+
+.tarjeta {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
+.tarjeta p {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  padding: 0 0.75rem 1rem;
+}
+
+/* Efecto hover para interactuar */
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Responsivo para tablets y móviles */
+@media (max-width: 768px) {
+  .contenedor-peliculas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tarjeta {
+    width: 80%;
+  }
+}
+
+/* ===== Footer ===== */
+#footer {
+  background-color: #6d4469;  
+  color: #f0f0f0;            
+  text-align: center;        
+  padding: 2rem 1rem;         
+  margin-top: 3rem;            
+  font-family: 'Inter', sans-serif; /* fuente general del footer */
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+#footer h1 {
+  font-size: 1.5rem;
+  font-family:"Inter";
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#footer .email a {
+  color: #ffffff;             
+  text-decoration: none;      
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;  /* animación suave */
+}
+
+#footer .email a:hover {
+  background-color: #ffffff;  /* fondo blanco al pasar el mouse */
+  color: #6d4469;            
+  text-decoration: none;
+  transform: translateY(-2px); 
+}
+
+/*11. Responsividad */
+@media (max-width: 768px) {
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sobre-mi {
+        align-items: center;
+        text-align: center;
+        font: size 1px;
+    }
+
+    #sobre-mi img {
+        align-self: center;
+    }
+}
