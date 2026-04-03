@@ -13,10 +13,10 @@ Se me ha dificultado debido a que no tengo experiencia con este lenguaje y el tr
 - [x] Archivo "README.md" creado, que incluye una breve descripción del TP y este checklist.
 
 ## Repositorio y Publicación:
-- [ ] Repositorio en GitHub creado.
-- [ ] Proyecto subido al repositorio.
-- [ ] Proyecto publicado utilizando GitHub Pages.
-- [ ] En el "README.md" se indica la URL de GitHub Pages.
+- [x] Repositorio en GitHub creado.
+- [x] Proyecto subido al repositorio.
+- [x] Proyecto publicado utilizando GitHub Pages.
+- [x] En el "README.md" se indica la URL de GitHub Pages.
 
 ## Uso de Google Fonts:
 - [x] Enlace a Google Fonts incluido en la sección `<head>` del HTML.
@@ -57,3 +57,8 @@ Implementé un efecto hover en las tarjetas de proyectos y películas que las el
 - [x] Se aplicaron buenas prácticas de accesibilidad (uso de atributos `alt` en las imágenes, etiquetas semánticas).
 - [x] Se añadieron comentarios adicionales donde se describen decisiones de diseño o la lógica de implementación.
 
+
+
+https://github.com/gildamorgante/Primer-PFO-Front
+
+https://primer-pfo-front.vercel.app/
