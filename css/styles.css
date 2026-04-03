@@ -159,6 +159,7 @@ nav ul li a {
 
 
   /*  6. Sección Tarjetas / Proyectos*/
+/* ===== Sección Tarjetas / Proyectos ===== */
 #tarjetas {
     padding: 2rem;
 }
@@ -180,10 +181,18 @@ nav ul li a {
     border-radius: 10px;
     padding: 1rem;
     max-width: 300px;
-    flex: 1 1 250px;
+    flex: 1 1 250px; 
     width: 100%;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
 }
 
 .tarjeta:hover {
@@ -191,11 +200,12 @@ nav ul li a {
     box-shadow: 0 8px 12px rgba(0,0,0,0.2);
 }
 
-.tarjeta img {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 0.5rem;
+.tarjeta p {
+    font-size: 1rem;
+    color: #4a4a4a;
+    line-height: 1.4;
 }
+
 
 /* 7. Tabla de Habilidades */
 #habilidades {
@@ -278,47 +288,82 @@ nav ul li a {
 
 /* ===== Sección Películas ===== */
 #peliculas {
-  padding: 4rem 2rem;
-  background-color: #fff;
+    padding: 4rem 2rem;
+    background-color: #fff;
 }
 
 #peliculas h2 {
-  text-align: center;
-  font-family: 'Boldonse', sans-serif;
-  font-size: 1,5rem;
-  margin-bottom: 3rem;
-  color: #6d4469;
+    text-align: center;
+    font-family: 'Boldonse', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: #6d4469;
 }
 
 .contenedor-peliculas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;              /* espacio entre tarjetas */
-  justify-content: center; /* centra horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
-.tarjeta {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  overflow: hidden;
-  width: 100%;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Unificar estilos de tarjetas de películas */
+.contenedor-peliculas .tarjeta {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.tarjeta img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 1rem;
+.contenedor-peliculas .tarjeta img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
 }
 
+.contenedor-peliculas .tarjeta p {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    padding: 0 0.75rem 1rem;
+}
 
-.tarjeta p {
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  padding: 0 0.75rem 1rem;
+.contenedor-peliculas .tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ===== Responsividad para móviles ===== */
+@media (max-width: 768px) {
+    .contenedor-tarjetas,
+    .contenedor-peliculas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 90%;
+        max-width: 420px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta {
+        width: 95%;
+    }
+
+    #peliculas h2,
+    #tarjetas h2 {
+        font-size: 1.3rem;
+    }
+
+    .tarjeta p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Efecto hover para interactuar */
@@ -327,16 +372,6 @@ nav ul li a {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* Responsivo para tablets y móviles */
-@media (max-width: 768px) {
-  .contenedor-peliculas {
-    flex-direction: column;
-    align-items: center;
-  }
-  .tarjeta {
-    width: 80%;
-  }
-}
 
 /* ===== Footer ===== */
 #footer {
